@@ -17,6 +17,7 @@ function verificaPessoas(idade) {
             }
             else {
                 console.log("Adulto cadastrado no sistema");
+                return metodoOriginal.apply(this);
             }
         };
     };

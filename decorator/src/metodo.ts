@@ -13,6 +13,7 @@ function verificaPessoas(idade:number){
         console.log("Estamos cadastrando um menor")
       }else{
         console.log("Adulto cadastrado no sistema")
+        return metodoOriginal.apply(this)
       }
     }
   }
