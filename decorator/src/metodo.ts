@@ -2,18 +2,19 @@
 
 function verificaPessoas(idade:number){
   return (target: any, key:string, descriptor: PropertyDescriptor)=>{
-    console.log("Target:", target)
-    console.log("Key:", key)
-    console.log("Descriptor:", descriptor)
+    console.log("Target:", target);
+    console.log("Key:", key);
+    console.log("Descriptor:", descriptor);
 
     const metodoOriginal = descriptor.value //Salvar o metodo original
 
     descriptor.value = function () {
       if(idade < 18){
         console.log("Estamos cadastrando um menor")
+        return metodoOriginal.apply(this);
       }else{
         console.log("Adulto cadastrado no sistema")
-        return metodoOriginal.apply(this)
+        return metodoOriginal.apply(this);
       }
     }
   }

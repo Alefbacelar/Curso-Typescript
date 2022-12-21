@@ -14,6 +14,7 @@ function verificaPessoas(idade) {
         descriptor.value = function () {
             if (idade < 18) {
                 console.log("Estamos cadastrando um menor");
+                return metodoOriginal.apply(this);
             }
             else {
                 console.log("Adulto cadastrado no sistema");
