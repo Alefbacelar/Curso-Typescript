@@ -20,7 +20,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 class Sistema{
 
 } */
-// ===============PRATICANDO ================
+// =============== PRATICANDO ================
 function setIpservidor(novoIp) {
     return (target) => {
         return class extends target {

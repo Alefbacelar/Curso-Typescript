@@ -19,7 +19,7 @@ class Sistema{
 
 
 
-// ===============PRATICANDO ================
+// =============== PRATICANDO ================
 
 function setIpservidor(novoIp : string){
   return (target: any)=>{ //target é o construtor da nossa classe.
