@@ -10,13 +10,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 /* function logInfo(target: any){
   console.log("Sistema está online!");
 } */
-function logInfo(mensagem) {
+/* function logInfo(mensagem: any){
+  return(target: any)=>{
+    console.log(`${mensagem},${target}`)
+  }
+}
+
+@logInfo("Sistema está online!")
+class Sistema{
+
+} */
+// ===============PRATICANDO ================
+function setIpservidor(novoIp) {
     return (target) => {
-        console.log(`${mensagem},${target}`);
+        return class extends target {
+            constructor() {
+                super(...arguments);
+                this.ip = novoIp;
+            }
+        };
     };
 }
-let Sistema = class Sistema {
+let Servidor = class Servidor {
 };
-Sistema = __decorate([
-    logInfo("Sistema está online!")
-], Sistema);
+Servidor = __decorate([
+    setIpservidor("xxx.xxx.xx.x")
+], Servidor);
+const servidor1 = new Servidor();
+console.log(servidor1);
