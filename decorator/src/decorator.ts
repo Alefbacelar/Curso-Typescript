@@ -2,11 +2,17 @@
 
 
 // Target = recebet o contructor na nossa classe
-function logInfo(target: any){
-  console.log(target);
+/* function logInfo(target: any){
+  console.log("Sistema está online!");
+} */
+
+function logInfo(mensagem: any){
+  return(target: any)=>{
+    console.log(`${mensagem},${target}`)
+  }
 }
 
-@logInfo
+@logInfo("Sistema está online!")
 class Sistema{
 
 }

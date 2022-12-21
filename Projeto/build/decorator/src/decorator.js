@@ -7,11 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 // Target = recebet o contructor na nossa classe
-function logInfo(target) {
-    console.log(target);
+/* function logInfo(target: any){
+  console.log("Sistema está online!");
+} */
+function logInfo(mensagem) {
+    return (target) => {
+        console.log(`${mensagem},${target}`);
+    };
 }
 let Sistema = class Sistema {
 };
 Sistema = __decorate([
-    logInfo
+    logInfo("Sistema está online!")
 ], Sistema);
